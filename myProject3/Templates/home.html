@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Home Page</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #6a11cb, #2575fc, #00d4ff);
+        overflow: hidden;
+      }
+
+      .background-circle {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        filter: blur(30px);
+      }
+
+      .circle1 {
+        top: -80px;
+        left: -80px;
+      }
+
+      .circle2 {
+        bottom: -100px;
+        right: -100px;
+      }
+
+      .container {
+        position: relative;
+        text-align: center;
+        padding: 60px;
+        width: 90%;
+        max-width: 700px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        animation: fadeIn 1.2s ease;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        text-decoration: none;
+        color: white;
+        background: #ff6b6b;
+        border-radius: 40px;
+        font-size: 18px;
+        transition: 0.4s;
+        margin: 10px;
+      }
+
+      .btn:hover {
+        background: #ffffff;
+        color: #2575fc;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      footer {
+        margin-top: 35px;
+        font-size: 14px;
+        opacity: 0.8;
+      }
+      .django {
+        color: #ff6b6b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-circle circle1"></div>
+    <div class="background-circle circle2"></div>
+
+    <div class="container">
+      <h1>🚀 Welcome Home</h1>
+
+      <p>
+        Create amazing web applications with modern design, responsive layouts,
+        and beautiful user experiences.
+      </p>
+
+      <a href="#" class="btn">Get Started</a>
+      <a href="#" class="btn">Learn More</a>
+
+      <footer>
+        © 2026 Your Company | Designed with
+        <strong class="django">Django</strong>
+      </footer>
+    </div>
+  </body>
+</html>
