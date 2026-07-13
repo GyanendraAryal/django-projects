@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Main Product Title</title>
-</head>
-<body>
-<h1>Welcome to My Project</h1>
-<p>This is the Product Page for my Django project.</p>
-</body>
-</html>
+{% extends "base.html"%}
+{% block title%} Product Page {% endblock %}
+
+{% block content%}
+<h1>Shop Products</h1>
+<p>Here are the latest Products you can shop: </p>
+ {% endblock %}
