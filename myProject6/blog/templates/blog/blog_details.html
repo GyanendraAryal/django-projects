@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogDetail Page</title>
+  </head>
+  <body>
+      <h1>Blog Detail</h1>
+    <p><b>Author Available?: {{post.author |yesno:"Yes,No,MayBe"}} </b></p>
+    <p><b>Comments Counts: {{post.comments_count}} Comment{{post.comments_count|pluralize}} </b></p>
+    <p><b>Created At: {{post.created_at}} </b></p>
+    <p><b>Formated Date: {{post.created_at|date:"DdMy"}} </b></p>
+    <p><b>Time Only: {{post.created_at|time:"H:i"}} </b></p>
+    <hr>
+    <p><b>Title Encode: {{post.title|urlencode}} </b></p>
+    <p><b>Fload Formate Example: {{1324.1341341324|floatformat:3}} </b></p>
+
+    <hr>
+    <h1>Text Filter</h1>
+    <p><b>Title(Normal): {{post.title}} </b></p>
+    <p><b>UpperCase: {{post.title|upper}} </b></p>
+    <p><b>LowerCase: {{post.title|lower}} </b></p>
+    <p><b>Capitalization: {{post.title|capfirst}} </b></p>
+    <p><b>Title Case: {{post.title|title}} </b></p>
+    <p><b>Trancate Characters: {{post.title|truncatechars:10}} </b></p>
+    <p><b>Trancate Word: {{post.title|truncatewords:3}} </b></p>
+    <p><b>Line Break: {{post.title|linebreaks}} </b></p>
+    <hr>
+    <p><b>Original Price: {{post.price}} </b></p>
+    <p><b>Added Price(5): {{post.price | add:5}} </b></p>
+    {% comment %} <p><b>Divided Price(5): {{post.number}} </b></p> {% endcomment %}
+    {% if post.number|divisibleby:2 %}
+    <p>{{post.number}} is Even</p>
+    {%else%}
+    <p>{{post.number}} is Odd </p>
+    {% endif%}
+    <hr>
+    <hr>
+    <p><b>First Tag: {{post.tags | first}} </b></p>
+    <p><b>Last Tag: {{post.tags | last}} </b></p>
+    <p><b>Tag Length: {{post.tags | length}} </b></p>
+    <p><b>Tag Slice(2): {{post.tags |slice:":2"}} </b></p>
+    <p><b>Tag Join(2): {{post.tags |join:", "}} </b></p>
+  </body>
+  </body>
+</html>
