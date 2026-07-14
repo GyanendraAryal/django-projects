@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#3 Template</title>
+  </head>
+  <body>
+    <h1>Blog List</h1>
+    {% comment %}
+    <p>
+      <b
+        >{% for item in blogs%}
+        <p>{{forloop.counter}} {{item.title}}</p>
+        {% endfor%}</b
+      >
+    </p>
+    {% endcomment %}
+    <hr />
+    {% if blogs.1.is_featured%}
+    <h2>Featured Blog: {{blogs.1.title}}</h2>
+    {%else%}
+    <h2>No Featued Blog: {{blogs.1.title}}</h2>
+    {% endif %} {% comment %} With {% endcomment %}
+    {% with total_blog=blogs|length%}
+    <p>Total Blogs: {{total_blog}}</p>
+    {% endwith %}
+    <hr />
+    <h2>Blogs in Table</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+      {%for blog in blogs%}
+      <tr style="background-color: {% cycle 'lightblue' 'lightgreen' %};">
+        <td>{{forloop.counter}}</td>
+        <td>{{blog.title}}</td>
+        <td>{{blog.author}}</td>
+        <td>{{blog.is_featured}}</td>
+      </tr>
+      {% endfor %}
+      <hr />
+      <hr />
+      {% comment %} FitstOf {% endcomment %}
+      <p>Author: {%firstof blog.1.author "Anonymous" %} </p>
+      {% comment %} VERBATIM {% endcomment %}
+      {% verbatim  %}
+      <p>Author: {{blog.1.author}}</p>
+      {% endverbatim  %}
+    </table>
+
+    {% comment %} Autoescape {% endcomment %}
+    <p>Default(Safe Escaped): {{html_code|safe}} </p>
+    <h2>Auoescape Example: </h2>
+    {% autoescape off %}
+    {{html_code}}...
+    {% endautoescape %}
+  </body>
+</html>
