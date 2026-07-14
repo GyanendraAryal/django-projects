@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>#1 Template Basic</title>
+  </head>
+  <body>
+    <h1>Template Basic</h1>
+    <p>Welcome to the blog home</p>
+    <p>Name: {{name}}</p>
+    <p>Age: {{age}}</p>
+    {% comment %} ListAccess {% endcomment %}
+    <p>First Skill: {{skills.0}}</p>
+    <p>Skills: {{skills}}</p>
+
+    {% comment %} Obj Attribute {% endcomment %}
+
+    <p>User Name: {{user.name}}</p>
+    <p>User Age: {{user.age}}</p>
+
+    Dictionary
+    <h2>Blog Information</h2>
+    <p>Title: {{blog.title}}</p>
+    <p>Content: {{blog.content|safe}}</p>
+    <p>Content: {{blog.content}}</p>
+    <p>Created: {{blog.created_at}}</p>
+
+    Default Value:
+
+
+    <p>Default Empty Value: {{empty_value | default:"No value rn"}}</p>
+    <p>Default Empty Value: {{empty_value | default_if_none:"No value"}}</p>
+  </body>
+</html>
