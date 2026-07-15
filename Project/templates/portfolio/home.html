@@ -1,0 +1,27 @@
+{% extends "portfolio/base.html" %} {% block content %} {%load static%}
+<section class="hero">
+    <img src="static/images/hero.png" alt="">
+</section>
+
+<section class="projects">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="static/images/project1.png" alt="project-img" />
+      <h3>Personal Project</h3>
+    </div>
+    <div class="project-card">
+      <img src="static/images/project2.png" alt="project-img" />
+      <h3>Ecommerce Project</h3>
+    </div>
+    <div class="project-card">
+      <img src="static/images/project3.png" alt="project-img" />
+      <h3>Blog Project</h3>
+    </div>
+    <div class="project-card">
+      <img src="static/images/project4.png" alt="project-img" />
+      <h3>Chat Project</h3>
+    </div>
+  </div>
+</section>
+{% endblock content %}
