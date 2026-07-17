@@ -4,3 +4,10 @@ simple percentage calculation
 remove whitespace in HTML
 block
 filters + tags
+
+
+
+
+
+
+customize admin, search, filter and admin ordering
