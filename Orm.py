@@ -1,5 +1,8 @@
-class Student(models.Model):
-    name = models.CharField()
-    age = models.IntegerField()
+# class Student(models.Model):
+#     name = models.CharField()
+#     age = models.IntegerField()
 
-    student = Student.object.all()
+#     def __str__(self):
+#         return self.name
+
+# student = Student.object.all()
