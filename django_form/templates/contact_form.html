@@ -1,0 +1,32 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '/src/output.css'%}" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <form
+      class="flex flex-col m-auto mt-[20%] gap-1 p-4 h-60 w-70 border-2"
+      action="{%url 'submit_contact'%}"
+      method="POST"
+    >
+      {%csrf_token%}
+      <label for="name">Name: </label>
+      <input class='border' type="text" id="name" name="name" />
+
+      <label for="message">Message: </label>
+      <textarea
+        class="border"
+        id="message"
+        name="message"
+        rows="5"
+        cols="50"
+    
+      ></textarea>
+      <input class="border rounded-xl h-[50px]" type="submit" value="Submit">
+    </form>
+  </body>
+</html>
